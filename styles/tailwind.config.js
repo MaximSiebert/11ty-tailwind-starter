@@ -1,7 +1,9 @@
 module.exports = {
   purge: [
-    "../_includes/*.njk",
-    "../*.njk"
+    "../_site/**/*.html",
+    "../_site/*.html"
+    // "../_includes/*.njk",
+    // "../*.njk"
   ],
   theme: {
     extend: {
