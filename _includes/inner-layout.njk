@@ -1,0 +1,14 @@
+{% extends "_includes/default.njk" %}
+
+{% block content %}
+  {% include 'header.njk' %}
+  Post image: {% image image, imageAlt %}
+  <h1>Post title: {{ title }}</h1>
+  Post content: {{ content | safe }}
+
+  {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
+  {% set nextPost = collections.post | getNextCollectionItem(page) %}
+
+  <p>{% if previousPost %}Previous post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}</p>
+  <p>{% if nextPost %}Next post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}</p>
+{% endblock %}
