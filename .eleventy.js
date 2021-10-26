@@ -1,8 +1,6 @@
 const Image = require("@11ty/eleventy-img");
 const now = String(Date.now());
 
-let pathPrefix = "/11ty-tailwind-starter/";
-
 async function imageShortcode(src, alt) {
   if(alt === undefined) {
     // You bet we throw an error on missing alt (alt="" works okay)
@@ -12,7 +10,7 @@ async function imageShortcode(src, alt) {
   let metadata = await Image(src, {
     widths: [600],
     formats: ["jpeg"],
-    urlPath: `${pathPrefix}/images/`,
+    urlPath: "/images/",
     outputDir: "./_site/images/"
   });
 
@@ -21,7 +19,6 @@ async function imageShortcode(src, alt) {
 }
 
 module.exports = function (eleventyConfig) {
-
   eleventyConfig.addWatchTarget('./styles/tailwind.config.js');
   eleventyConfig.addWatchTarget('./styles/tailwind.css');
 
@@ -32,8 +29,4 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-
-  return {
-    pathPrefix
-  }
 };
