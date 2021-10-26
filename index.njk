@@ -8,7 +8,7 @@
       <span class="text-change">Good design</span><br/>
       <span class="change">is<br/>as little design<br/>as possible</span>
     </div>
-    <p class="mt-4">Posts:</p>
+    <p class="mt-4 text-2xl">Posts:</p>
     <ul class="list-disc list-inside">
       {%- for post in collections.post -%}
         <li {% if page.url == post.url %} aria-current="page" {% endif %}>
