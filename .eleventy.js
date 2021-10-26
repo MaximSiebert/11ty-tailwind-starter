@@ -29,4 +29,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+
+  return {
+    pathPrefix: "/11ty-tailwind-starter/"
+  }
 };
