@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve & NODE_ENV=development postcss ./styles/tailwind.css -o ./_site/styles.css --watch",
-    "build": "ELEVENTY_PRODUCTION=true eleventy --pathprefix=11ty-tailwind-starter & NODE_ENV=production postcss ./styles/tailwind.css -o ./_site/styles.css --minify"
+    "build": "ELEVENTY_PRODUCTION=true eleventy --pathprefix=/11ty-tailwind-starter/ & NODE_ENV=production postcss ./styles/tailwind.css -o ./_site/styles.css --minify"
   },
   "keywords": [],
   "author": "",
