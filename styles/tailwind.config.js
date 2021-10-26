@@ -1,8 +1,8 @@
 module.exports = {
   mode: 'jit',
   purge: [
-    ["./_includes/*.njk"],
-    ["./*.njk"]
+    ["./_site/**/*.html"],
+    ["./_site/*.html"]
   ],
   theme: {
     extend: {
